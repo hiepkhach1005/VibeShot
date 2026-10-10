@@ -1,0 +1,153 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00100000000000000000001 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000001 /* main.swift */; };
+		A00100000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000002 /* AppDelegate.swift */; };
+		A00100000000000000000003 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000003 /* StatusItemController.swift */; };
+		A00100000000000000000004 /* CapturePlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000004 /* CapturePlatform.swift */; };
+		A00100000000000000000005 /* OverlayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000005 /* OverlayModule.swift */; };
+		A00100000000000000000006 /* AnnotationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000006 /* AnnotationModule.swift */; };
+		A00100000000000000000007 /* ExportModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000007 /* ExportModule.swift */; };
+		A00100000000000000000008 /* SettingsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000008 /* SettingsModule.swift */; };
+		A00100000000000000000009 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000009 /* AppError.swift */; };
+		A00100000000000000000010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000011 /* Assets.xcassets */; };
+		A00100000000000000000011 /* CaptureModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000012 /* CaptureModels.swift */; };
+		A00100000000000000000012 /* DisplayGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000013 /* DisplayGeometry.swift */; };
+		A00100000000000000000013 /* CaptureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000014 /* CaptureCoordinator.swift */; };
+		A00100000000000000000014 /* CaptureOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000015 /* CaptureOverlayView.swift */; };
+		A00100000000000000000015 /* CaptureSessionConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000016 /* CaptureSessionConsumer.swift */; };
+		A00100000000000000000016 /* OverlayWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000017 /* OverlayWindowController.swift */; };
+		A00100000000000000000017 /* SelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000018 /* SelectionController.swift */; };
+		A00100000000000000000018 /* ToolbarLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000019 /* ToolbarLayoutEngine.swift */; };
+		A00100000000000000000019 /* AnnotationToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000020 /* AnnotationToolbarView.swift */; };
+		A00100000000000000000020 /* CaptureLifecycleMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000021 /* CaptureLifecycleMonitor.swift */; };
+		A00100000000000000000021 /* PrivacySafeMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000000000022 /* PrivacySafeMetrics.swift */; };
+		A00200000000000000000001 /* VibeShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000000000001 /* VibeShotTests.swift */; };
+		A00200000000000000000002 /* SyntheticFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000000000002 /* SyntheticFixture.swift */; };
+		A00200000000000000000003 /* M2CaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000000000003 /* M2CaptureTests.swift */; };
+		A00200000000000000000004 /* M3SelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000000000004 /* M3SelectionTests.swift */; };
+		A00200000000000000000005 /* M4AnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000000000005 /* M4AnnotationTests.swift */; };
+		A00200000000000000000006 /* M5TextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000000000006 /* M5TextTests.swift */; };
+		A00200000000000000000007 /* M6ExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000000000007 /* M6ExportTests.swift */; };
+		A00200000000000000000008 /* M7HardeningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000000000008 /* M7HardeningTests.swift */; };
+		A00300000000000000000001 /* VibeShotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00300000000000000000001 /* VibeShotUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D00100000000000000000001 = {isa = PBXContainerItemProxy; containerPortal = F00100000000000000000001 /* Project object */; proxyType = 1; remoteGlobalIDString = E00100000000000000000001; remoteInfo = VibeShot; };
+		D00100000000000000000002 = {isa = PBXContainerItemProxy; containerPortal = F00100000000000000000001 /* Project object */; proxyType = 1; remoteGlobalIDString = E00100000000000000000001; remoteInfo = VibeShot; };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B00100000000000000000001 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B00100000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B00100000000000000000003 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		B00100000000000000000004 /* CapturePlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePlatform.swift; sourceTree = "<group>"; };
+		B00100000000000000000005 /* OverlayModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayModule.swift; sourceTree = "<group>"; };
+		B00100000000000000000006 /* AnnotationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationModule.swift; sourceTree = "<group>"; };
+		B00100000000000000000007 /* ExportModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportModule.swift; sourceTree = "<group>"; };
+		B00100000000000000000008 /* SettingsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModule.swift; sourceTree = "<group>"; };
+		B00100000000000000000009 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		B00100000000000000000010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00100000000000000000023 /* VibeShot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VibeShot.entitlements; sourceTree = "<group>"; };
+		B00100000000000000000011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B00100000000000000000012 /* CaptureModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureModels.swift; sourceTree = "<group>"; };
+		B00100000000000000000013 /* DisplayGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGeometry.swift; sourceTree = "<group>"; };
+		B00100000000000000000014 /* CaptureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureCoordinator.swift; sourceTree = "<group>"; };
+		B00100000000000000000015 /* CaptureOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOverlayView.swift; sourceTree = "<group>"; };
+		B00100000000000000000016 /* CaptureSessionConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionConsumer.swift; sourceTree = "<group>"; };
+		B00100000000000000000017 /* OverlayWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowController.swift; sourceTree = "<group>"; };
+		B00100000000000000000018 /* SelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionController.swift; sourceTree = "<group>"; };
+		B00100000000000000000019 /* ToolbarLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarLayoutEngine.swift; sourceTree = "<group>"; };
+		B00100000000000000000020 /* AnnotationToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationToolbarView.swift; sourceTree = "<group>"; };
+		B00100000000000000000021 /* CaptureLifecycleMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureLifecycleMonitor.swift; sourceTree = "<group>"; };
+		B00100000000000000000022 /* PrivacySafeMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySafeMetrics.swift; sourceTree = "<group>"; };
+		B00200000000000000000001 /* VibeShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibeShotTests.swift; sourceTree = "<group>"; };
+		B00200000000000000000002 /* SyntheticFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntheticFixture.swift; sourceTree = "<group>"; };
+		B00200000000000000000003 /* M2CaptureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M2CaptureTests.swift; sourceTree = "<group>"; };
+		B00200000000000000000004 /* M3SelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3SelectionTests.swift; sourceTree = "<group>"; };
+		B00200000000000000000005 /* M4AnnotationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M4AnnotationTests.swift; sourceTree = "<group>"; };
+		B00200000000000000000006 /* M5TextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M5TextTests.swift; sourceTree = "<group>"; };
+		B00200000000000000000007 /* M6ExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M6ExportTests.swift; sourceTree = "<group>"; };
+		B00200000000000000000008 /* M7HardeningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7HardeningTests.swift; sourceTree = "<group>"; };
+		B00300000000000000000001 /* VibeShotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibeShotUITests.swift; sourceTree = "<group>"; };
+		C00100000000000000000001 /* VibeShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VibeShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00100000000000000000002 /* VibeShotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VibeShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00100000000000000000003 /* VibeShotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VibeShotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E10100000000000000000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		E10200000000000000000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		E10300000000000000000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F10100000000000000000001 = {isa = PBXGroup; children = (F10200000000000000000001 /* VibeShot */, F10300000000000000000001 /* VibeShotTests */, F10400000000000000000001 /* VibeShotUITests */, F10500000000000000000001 /* Products */,); sourceTree = "<group>"; };
+		F10200000000000000000001 /* VibeShot */ = {isa = PBXGroup; children = (F10200000000000000000002 /* App */, F10200000000000000000003 /* MenuBar */, F10200000000000000000004 /* Capture */, F10200000000000000000005 /* Overlay */, F10200000000000000000006 /* Annotation */, F10200000000000000000007 /* Export */, F10200000000000000000008 /* Settings */, F10200000000000000000009 /* Support */, F10200000000000000000010 /* Resources */, B00100000000000000000010 /* Info.plist */, B00100000000000000000023 /* VibeShot.entitlements */,); path = VibeShot; sourceTree = "<group>"; };
+		F10200000000000000000010 /* Resources */ = {isa = PBXGroup; children = (B00100000000000000000011 /* Assets.xcassets */,); path = Resources; sourceTree = "<group>"; };
+		F10200000000000000000002 /* App */ = {isa = PBXGroup; children = (B00100000000000000000001, B00100000000000000000002,); path = App; sourceTree = "<group>"; };
+		F10200000000000000000003 /* MenuBar */ = {isa = PBXGroup; children = (B00100000000000000000003,); path = MenuBar; sourceTree = "<group>"; };
+		F10200000000000000000004 /* Capture */ = {isa = PBXGroup; children = (B00100000000000000000004, B00100000000000000000012, B00100000000000000000013, B00100000000000000000014, B00100000000000000000021,); path = Capture; sourceTree = "<group>"; };
+		F10200000000000000000005 /* Overlay */ = {isa = PBXGroup; children = (B00100000000000000000005, B00100000000000000000015, B00100000000000000000016, B00100000000000000000017, B00100000000000000000018, B00100000000000000000019, B00100000000000000000020,); path = Overlay; sourceTree = "<group>"; };
+		F10200000000000000000006 /* Annotation */ = {isa = PBXGroup; children = (B00100000000000000000006,); path = Annotation; sourceTree = "<group>"; };
+		F10200000000000000000007 /* Export */ = {isa = PBXGroup; children = (B00100000000000000000007,); path = Export; sourceTree = "<group>"; };
+		F10200000000000000000008 /* Settings */ = {isa = PBXGroup; children = (B00100000000000000000008,); path = Settings; sourceTree = "<group>"; };
+		F10200000000000000000009 /* Support */ = {isa = PBXGroup; children = (B00100000000000000000009, B00100000000000000000022,); path = Support; sourceTree = "<group>"; };
+		F10300000000000000000001 /* VibeShotTests */ = {isa = PBXGroup; children = (B00200000000000000000001, B00200000000000000000002, B00200000000000000000003, B00200000000000000000004, B00200000000000000000005, B00200000000000000000006, B00200000000000000000007, B00200000000000000000008,); path = VibeShotTests; sourceTree = "<group>"; };
+		F10400000000000000000001 /* VibeShotUITests */ = {isa = PBXGroup; children = (B00300000000000000000001,); path = VibeShotUITests; sourceTree = "<group>"; };
+		F10500000000000000000001 /* Products */ = {isa = PBXGroup; children = (C00100000000000000000001, C00100000000000000000002, C00100000000000000000003,); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E00100000000000000000001 /* VibeShot */ = {isa = PBXNativeTarget; buildConfigurationList = F20100000000000000000001; buildPhases = (E11100000000000000000001, E10100000000000000000001, E12100000000000000000001,); buildRules = (); dependencies = (); name = VibeShot; productName = VibeShot; productReference = C00100000000000000000001; productType = "com.apple.product-type.application"; };
+		E00100000000000000000002 /* VibeShotTests */ = {isa = PBXNativeTarget; buildConfigurationList = F20200000000000000000001; buildPhases = (E11200000000000000000001, E10200000000000000000001, E12200000000000000000001,); buildRules = (); dependencies = (D10100000000000000000001,); name = VibeShotTests; productName = VibeShotTests; productReference = C00100000000000000000002; productType = "com.apple.product-type.bundle.unit-test"; };
+		E00100000000000000000003 /* VibeShotUITests */ = {isa = PBXNativeTarget; buildConfigurationList = F20300000000000000000001; buildPhases = (E11300000000000000000001, E10300000000000000000001, E12300000000000000000001,); buildRules = (); dependencies = (D10100000000000000000002,); name = VibeShotUITests; productName = VibeShotUITests; productReference = C00100000000000000000003; productType = "com.apple.product-type.bundle.ui-testing"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F00100000000000000000001 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 2700; LastUpgradeCheck = 2700; TargetAttributes = {E00100000000000000000001 = {CreatedOnToolsVersion = 27.0; }; E00100000000000000000002 = {CreatedOnToolsVersion = 27.0; TestTargetID = E00100000000000000000001; }; E00100000000000000000003 = {CreatedOnToolsVersion = 27.0; TestTargetID = E00100000000000000000001; }; }; }; buildConfigurationList = F20000000000000000000001; compatibilityVersion = "Xcode 15.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base,); mainGroup = F10100000000000000000001; productRefGroup = F10500000000000000000001; projectDirPath = ""; projectRoot = ""; targets = (E00100000000000000000001, E00100000000000000000002, E00100000000000000000003,); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E12100000000000000000001 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A00100000000000000000010 /* Assets.xcassets in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
+		E12200000000000000000001 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		E12300000000000000000001 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E11100000000000000000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00100000000000000000001, A00100000000000000000002, A00100000000000000000003, A00100000000000000000004, A00100000000000000000005, A00100000000000000000006, A00100000000000000000007, A00100000000000000000008, A00100000000000000000009, A00100000000000000000011, A00100000000000000000012, A00100000000000000000013, A00100000000000000000014, A00100000000000000000015, A00100000000000000000016, A00100000000000000000017, A00100000000000000000018, A00100000000000000000019, A00100000000000000000020, A00100000000000000000021,); runOnlyForDeploymentPostprocessing = 0; };
+		E11200000000000000000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00200000000000000000001, A00200000000000000000002, A00200000000000000000003, A00200000000000000000004, A00200000000000000000005, A00200000000000000000006, A00200000000000000000007, A00200000000000000000008,); runOnlyForDeploymentPostprocessing = 0; };
+		E11300000000000000000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00300000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D10100000000000000000001 = {isa = PBXTargetDependency; target = E00100000000000000000001 /* VibeShot */; targetProxy = D00100000000000000000001; };
+		D10100000000000000000002 = {isa = PBXTargetDependency; target = E00100000000000000000001 /* VibeShot */; targetProxy = D00100000000000000000002; };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F30100000000000000000001 = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; ENABLE_TESTABILITY = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_VERSION = 6.0; }; name = Debug; };
+		F30100000000000000000002 = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_VERSION = 6.0; }; name = Release; };
+		F30200000000000000000001 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO; CODE_SIGN_STYLE = Automatic; COMBINE_HIDPI_IMAGES = YES; CURRENT_PROJECT_VERSION = 1; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = VibeShot/Info.plist; CODE_SIGN_ENTITLEMENTS = VibeShot/VibeShot.entitlements; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; MACOSX_DEPLOYMENT_TARGET = 14.0; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.vibeshot.VibeShot; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 6.0; }; name = Debug; };
+		F30200000000000000000002 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO; CODE_SIGN_STYLE = Automatic; COMBINE_HIDPI_IMAGES = YES; CURRENT_PROJECT_VERSION = 1; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = VibeShot/Info.plist; CODE_SIGN_ENTITLEMENTS = VibeShot/VibeShot.entitlements; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; MACOSX_DEPLOYMENT_TARGET = 14.0; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.vibeshot.VibeShot; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 6.0; }; name = Release; };
+		F30300000000000000000001 = {isa = XCBuildConfiguration; buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.vibeshot.VibeShotTests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 6.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VibeShot.app/Contents/MacOS/VibeShot"; }; name = Debug; };
+		F30300000000000000000002 = {isa = XCBuildConfiguration; buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.vibeshot.VibeShotTests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 6.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VibeShot.app/Contents/MacOS/VibeShot"; }; name = Release; };
+		F30400000000000000000001 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.vibeshot.VibeShotUITests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 6.0; TEST_TARGET_NAME = VibeShot; }; name = Debug; };
+		F30400000000000000000002 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.vibeshot.VibeShotUITests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 6.0; TEST_TARGET_NAME = VibeShot; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F20000000000000000000001 = {isa = XCConfigurationList; buildConfigurations = (F30100000000000000000001, F30100000000000000000002,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		F20100000000000000000001 = {isa = XCConfigurationList; buildConfigurations = (F30200000000000000000001, F30200000000000000000002,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		F20200000000000000000001 = {isa = XCConfigurationList; buildConfigurations = (F30300000000000000000001, F30300000000000000000002,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		F20300000000000000000001 = {isa = XCConfigurationList; buildConfigurations = (F30400000000000000000001, F30400000000000000000002,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = F00100000000000000000001 /* Project object */;
+}

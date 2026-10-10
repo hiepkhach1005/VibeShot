@@ -1,0 +1,22 @@
+.DS_Store
+.build/
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+
+# Local metadata, generated reports, and private configuration
+dist/
+*.sarif
+.env
+.env.*
+!.env.example
+!.env.sample
+*.local.xcconfig
+Secrets.xcconfig
+*.p12
+*.pfx
+*.pem
+*.key
+*.mobileprovision
+DevelopmentCredentials/
