@@ -299,8 +299,8 @@ final class CaptureOverlayView: NSView {
         let layout = toolbarLayoutEngine.layout(
             selection: selection,
             visibleFrame: bounds,
-            verticalSize: CGSize(width: 54, height: 10 * 28 + 8),
-            horizontalSize: CGSize(width: 420, height: 38)
+            verticalSize: AnnotationToolbarView.preferredSize(for: .verticalTools),
+            horizontalSize: AnnotationToolbarView.preferredSize(for: .horizontalActions)
         )
         verticalToolbar.frame = layout.verticalFrame
         horizontalToolbar.frame = layout.horizontalFrame

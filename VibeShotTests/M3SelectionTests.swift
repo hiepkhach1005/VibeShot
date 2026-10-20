@@ -170,6 +170,28 @@ struct M3SelectionTests {
     }
 
     @Test
+    func toolbarsAnchorToSelectionBottomRightAndNeverOverlap() {
+        let visible = CGRect(x: 0, y: 0, width: 1000, height: 800)
+        let engine = ToolbarLayoutEngine(spacing: 10, edgeInset: 6)
+        let vertical = CGSize(width: 40, height: 300)
+        let horizontal = CGSize(width: 200, height: 40)
+
+        let selection = CGRect(x: 200, y: 200, width: 400, height: 300)
+        let layout = engine.layout(selection: selection, visibleFrame: visible, verticalSize: vertical, horizontalSize: horizontal)
+        #expect(layout.verticalFrame.minX == selection.maxX + 10)
+        #expect(layout.verticalFrame.minY == selection.minY)
+        #expect(layout.horizontalFrame.maxX == selection.maxX)
+        #expect(layout.horizontalFrame.maxY == selection.minY - 10)
+
+        let full = engine.layout(selection: visible, visibleFrame: visible, verticalSize: vertical, horizontalSize: horizontal)
+        #expect(visible.contains(full.verticalFrame))
+        #expect(visible.contains(full.horizontalFrame))
+        #expect(!full.verticalFrame.intersects(full.horizontalFrame))
+        #expect(full.verticalFrame.maxX == visible.maxX - 6)
+        #expect(full.verticalFrame.minY == visible.minY + 6)
+    }
+
+    @Test
     func fullScreenResolverUsesExplicitPointerThenDeterministicFallback() {
         let first = descriptor(id: 2, frame: CGRect(x: -100, y: 0, width: 100, height: 80))
         let second = descriptor(id: 4, frame: CGRect(x: 0, y: 0, width: 100, height: 80))

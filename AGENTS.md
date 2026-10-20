@@ -57,5 +57,7 @@ remaining risk without repeating intermediate agent reports.
   - `swift build` for fast compiler feedback.
   - `swift test` for fast unit-test feedback.
   - `./scripts/validate.sh` for the full unsigned Debug build/unit-test and Release build gate.
+  - `./scripts/run-local.sh` to install and launch a Release build signed with the local Apple
+    Development identity, so the Screen Recording grant survives rebuilds (ad-hoc builds lose it).
 - The UI test target is built but skipped by the unsigned validation script because its runner requires
   signing to bootstrap. Run UI tests separately with signing enabled when the task requires them.

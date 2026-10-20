@@ -34,12 +34,19 @@ struct ToolbarLayoutEngine: Equatable, Sendable {
             size: sanitized(verticalSize),
             spacing: spacing
         )
-        let horizontal = placeHorizontal(
+        var horizontal = placeHorizontal(
             selection: selection?.standardized,
             visible: visible,
             size: sanitized(horizontalSize),
             spacing: spacing
         )
+        // Both strips anchor to the bottom-right corner. When the selection leaves no room outside
+        // it (for example a full-screen selection), they fall back inside the selection and would
+        // overlap, so the action strip slides to the left of the tool strip.
+        if horizontal.intersects(vertical) {
+            horizontal.origin.x = vertical.minX - spacing - horizontal.width
+            horizontal = clamped(horizontal, to: visible)
+        }
         return ToolbarLayout(verticalFrame: vertical, horizontalFrame: horizontal)
     }
 
@@ -54,35 +61,41 @@ struct ToolbarLayoutEngine: Equatable, Sendable {
         layout(selection: selection, visibleFrame: visibleFrame, verticalSize: verticalSize, horizontalSize: horizontalSize)
     }
 
+    /// Tool strip: to the right of the selection, bottom-aligned with it; then to the left; then
+    /// inside the selection's bottom-right corner.
     private func placeVertical(selection: CGRect?, visible: CGRect, size: CGSize, spacing: CGFloat) -> CGRect {
         let candidates: [CGRect]
         if let selection {
             candidates = [
-                CGRect(x: selection.maxX + spacing, y: selection.midY - size.height / 2, width: size.width, height: size.height),
-                CGRect(x: selection.minX - spacing - size.width, y: selection.midY - size.height / 2, width: size.width, height: size.height)
+                CGRect(x: selection.maxX + spacing, y: selection.minY, width: size.width, height: size.height),
+                CGRect(x: selection.minX - spacing - size.width, y: selection.minY, width: size.width, height: size.height),
+                CGRect(x: selection.maxX - edgeInset - size.width, y: selection.minY + edgeInset, width: size.width, height: size.height)
             ]
         } else {
             candidates = [
-                CGRect(x: visible.maxX - edgeInset - size.width, y: visible.midY - size.height / 2, width: size.width, height: size.height)
+                CGRect(x: visible.maxX - edgeInset - size.width, y: visible.minY + edgeInset, width: size.width, height: size.height)
             ]
         }
-        let candidate = candidates.first(where: { visible.contains($0) }) ?? candidates[0]
+        let candidate = candidates.first(where: { visible.contains($0) }) ?? candidates[candidates.count - 1]
         return clamped(candidate, to: visible)
     }
 
+    /// Action strip: below the selection, right-aligned with it; then above; then inside the
+    /// selection's bottom-right corner.
     private func placeHorizontal(selection: CGRect?, visible: CGRect, size: CGSize, spacing: CGFloat) -> CGRect {
         let candidates: [CGRect]
         if let selection {
             candidates = [
-                CGRect(x: selection.midX - size.width / 2, y: selection.minY - spacing - size.height, width: size.width, height: size.height),
-                CGRect(x: selection.midX - size.width / 2, y: selection.maxY + spacing, width: size.width, height: size.height)
+                CGRect(x: selection.maxX - size.width, y: selection.minY - spacing - size.height, width: size.width, height: size.height),
+                CGRect(x: selection.maxX - size.width, y: selection.maxY + spacing, width: size.width, height: size.height),
+                CGRect(x: selection.maxX - edgeInset - size.width, y: selection.minY + edgeInset, width: size.width, height: size.height)
             ]
         } else {
             candidates = [
-                CGRect(x: visible.midX - size.width / 2, y: visible.minY + edgeInset, width: size.width, height: size.height)
+                CGRect(x: visible.maxX - edgeInset - size.width, y: visible.minY + edgeInset, width: size.width, height: size.height)
             ]
         }
-        let candidate = candidates.first(where: { visible.contains($0) }) ?? candidates[0]
+        let candidate = candidates.first(where: { visible.contains($0) }) ?? candidates[candidates.count - 1]
         return clamped(candidate, to: visible)
     }
 

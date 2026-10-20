@@ -28,12 +28,12 @@ struct M5ToolbarInteractionTests {
 
         let toolButtons = toolbar.subviews
             .compactMap { $0 as? NSButton }
-            .filter { $0.toolTip?.hasSuffix(" annotation tool") == true }
+            .filter { $0.accessibilityHelp()?.hasSuffix(" annotation tool") == true }
         #expect(toolButtons.count == AnnotationTool.allCases.count)
 
         for tool in AnnotationTool.allCases {
             let expectedHelp = "Choose \(tool.displayName.lowercased()) annotation tool"
-            let button = try #require(toolButtons.first(where: { $0.toolTip == expectedHelp }))
+            let button = try #require(toolButtons.first(where: { $0.accessibilityHelp() == expectedHelp }))
             received.removeAll(keepingCapacity: true)
 
             // Exercise the actual target/action path used by AppKit, rather than calling the

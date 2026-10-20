@@ -182,3 +182,16 @@ has not been identified; this change fixes independently verified lockout paths.
   visual comparison before changing overlay presentation code.
 - Review repair: restored selections now keep initial keyboard focus on their pointer display;
   the previous unconditional last-display focus could send shortcuts to the wrong overlay.
+
+## 2026-10-21 — Overlay toolbar polish, hover help, and instant overlay
+
+- Decision: toolbar controls use SF Symbol icons on a dark HUD strip with hand-drawn hover,
+  pressed, and selected states, so they read consistently over any screenshot.
+- Decision: hover help is drawn by an in-overlay `ToolbarTooltipView`. Native `toolTip`s never
+  appeared because the overlay panel's `.screenSaver` level sits above the system tooltip window.
+  Accessibility labels and help strings are unchanged.
+- Decision: both toolbars anchor to the selection's bottom-right corner (tools to the right,
+  bottom-aligned; actions below, right-aligned). With no room outside the selection they fall back
+  inside its bottom-right corner, and the action strip moves left of the tool strip to avoid overlap.
+- Decision: overlay panels use `animationBehavior = .none`. This resolves the capture-start
+  expansion noted on 2026-09-30.

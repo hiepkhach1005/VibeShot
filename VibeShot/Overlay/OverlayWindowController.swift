@@ -76,6 +76,9 @@ final class CaptureOverlayWindowController: NSWindowController {
         panel.isOpaque = false
         panel.backgroundColor = .clear
         panel.hasShadow = false
+        // Appear instantly: the default panel open/close animation makes the frozen screenshot
+        // visibly jump when the overlay replaces the live desktop.
+        panel.animationBehavior = .none
         panel.hidesOnDeactivate = false
         panel.ignoresMouseEvents = false
         panel.level = .screenSaver
