@@ -34,7 +34,7 @@ final class StatusItemController: NSObject, NSMenuDelegate {
         super.init()
         menu.delegate = self
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "camera.viewfinder", accessibilityDescription: "VibeShot")
+            button.image = MenuBarIcon.make()
             button.toolTip = "VibeShot"
             button.target = self
             button.action = #selector(statusItemClicked(_:))
