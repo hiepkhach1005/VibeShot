@@ -26,5 +26,7 @@
 	<string>VibeShot needs Screen Recording access to capture the area you select.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>© 2026 Bá Vương. All rights reserved.</string>
 </dict>
 </plist>
